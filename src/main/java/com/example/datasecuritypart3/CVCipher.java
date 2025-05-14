@@ -1,26 +1,25 @@
 package com.example.datasecuritypart3;
 
 import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.stage.*;
+import javafx.scene.control.*;
 
 public class CVCipher extends Application {
 
-    @Override
-    public void start(Stage primaryStage) {
-        Label label = new Label("Applikacioni Caesar & Vigenère Chiper");
-
-        StackPane root = new StackPane(label);
-        Scene scene = new Scene(root, 400, 300);
-
-        primaryStage.setTitle("Chipher Tool");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
+    private TextField keyField = new TextField();
+    private TextField filePathField = new TextField();
+    private TextField savePathField = new TextField();
+    private TextArea messageArea = new TextArea();
+    private ComboBox<String> algorithmBox = new ComboBox<>();
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    @Override
+    public void start(Stage stage) {
+        stage.setTitle("Caesar & Vigenère Cipher Tool");
     }
 }

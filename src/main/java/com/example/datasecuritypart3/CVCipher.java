@@ -33,7 +33,17 @@ public class CVCipher extends Application {
         topPane.add(keyField, 1, 0);
 
         Button browseFileBtn = new Button("Browse");
-        Button saveFileVtn = new Button("Save");
+        Button saveFileBtn = new Button("Save As");
 
+        filePathField.setPrefWidth(300);
+        savePathField.setPrefWidth(300);
+
+        topPane.add(new Label("Input File:"), 0, 1);
+        topPane.add(filePathField, 1, 1);
+        topPane.add(browseFileBtn, 2, 1);
+
+        topPane.add(new Label("Save To:"), 0, 2);
+        topPane.add(savePathField, 1, 2);
+        topPane.add(saveFileBtn, 2, 2);
     }
 }

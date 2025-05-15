@@ -45,5 +45,16 @@ public class CVCipher extends Application {
         topPane.add(new Label("Save To:"), 0, 2);
         topPane.add(savePathField, 1, 2);
         topPane.add(saveFileBtn, 2, 2);
+
+        browseFileBtn.setOnAction(e ->{
+            File file = new FileChooser().showOpenDialog(stage);
+            if(file != null) filePathField.setText(file.getAbsolutePath());
+        });
+
+        saveFileBtn.setOnAction(e ->{
+            File file = new FileChooser().showSaveDialog(stage);
+            if(file != null) savePathField.setText(file.getAbsolutePath());
+        });
+
     }
 }

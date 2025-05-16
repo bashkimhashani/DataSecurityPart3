@@ -65,6 +65,9 @@ public class CVCipher extends Application {
         HBox bottomPane = new HBox(10);
         bottomPane.setAlignment(Pos.CENTER);
         bottomPane.setPadding(new Insets(10));
+
+        Button encryptBtn = new Button("Encrypt");
+        Button decryptBtn = new Button("Decrypt");
     }
 }
 

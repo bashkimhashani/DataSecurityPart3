@@ -76,6 +76,11 @@ public class CVCipher extends Application {
         decryptBtn.setOnAction(e -> process(false));
 
         bottomPane.getChildren().addAll(new Label("Algorithm:"), algorithmBox, encryptBtn, decryptBtn);
+
+        BorderPane root = new BorderPane();
+        root.setTop(topPane);
+        root.setCenter(centerBox);
+        root.setBottom(bottomPane);
     }
 }
 

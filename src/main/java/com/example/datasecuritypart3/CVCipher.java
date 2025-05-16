@@ -57,6 +57,9 @@ public class CVCipher extends Application {
             File file = new FileChooser().showSaveDialog(stage);
             if(file != null) savePathField.setText(file.getAbsolutePath());
         });
-
+        messageArea.setPromptText("Or type your message here...");
+        messageArea.setWrapText(true);
+        VBox centerBox = new VBox(10, new Label("Message:"), messageArea);
+        centerBox.setPadding(new Insets(10));
     }
 }

@@ -81,6 +81,12 @@ public class CVCipher extends Application {
         root.setTop(topPane);
         root.setCenter(centerBox);
         root.setBottom(bottomPane);
+
+        stage.setScene(new Scene(root, 600, 450));
+        stage.show();
+    }
+
+
     }
 }
 

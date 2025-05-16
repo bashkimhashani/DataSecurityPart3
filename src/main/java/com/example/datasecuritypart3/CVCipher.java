@@ -90,9 +90,12 @@ public class CVCipher extends Application {
         String algorithm = algorithmBox.getValue();
         String inputText = "";
 
-
-    }
-}
+        try {
+            if (!filePathField.getText().isEmpty()) {
+                inputText = Files.readString(new File(filePathField.getText()).toPath());
+            } else {
+                inputText = messageArea.getText();
+            }
 
 
 

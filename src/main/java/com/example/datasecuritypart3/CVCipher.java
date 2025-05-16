@@ -8,6 +8,8 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.*;
 import javafx.scene.control.*;
 
+import java.io.File;
+
 public class CVCipher extends Application {
 
     private TextField keyField = new TextField();

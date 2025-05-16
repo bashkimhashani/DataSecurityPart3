@@ -71,6 +71,11 @@ public class CVCipher extends Application {
 
         algorithmBox.getItems().addAll("Caesar", "Vigenère");
         algorithmBox.setValue("Caesar");
+
+        encryptBtn.setOnAction(e -> process(true));
+        decryptBtn.setOnAction(e -> process(false));
+
+        bottomPane.getChildren().addAll(new Label("Algorithm:"), algorithmBox, encryptBtn, decryptBtn);
     }
 }
 

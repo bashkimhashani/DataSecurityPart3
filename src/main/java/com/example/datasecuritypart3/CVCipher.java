@@ -61,5 +61,13 @@ public class CVCipher extends Application {
         messageArea.setWrapText(true);
         VBox centerBox = new VBox(10, new Label("Message:"), messageArea);
         centerBox.setPadding(new Insets(10));
+
+        HBox bottomPane = new HBox(10);
+        bottomPane.setAlignment(Pos.CENTER);
+        bottomPane.setPadding(new Insets(10));
     }
 }
+
+
+
+

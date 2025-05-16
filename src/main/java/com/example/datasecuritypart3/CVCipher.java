@@ -85,10 +85,19 @@ public class CVCipher extends Application {
         stage.setScene(new Scene(root, 600, 450));
         stage.show();
     }
+    private void process(boolean encrypt) {
+        String key = keyField.getText().trim();
+        String algorithm = algorithmBox.getValue();
+        String inputText = "";
 
 
     }
 }
+
+
+
+
+
 
 
 

@@ -68,6 +68,9 @@ public class CVCipher extends Application {
 
         Button encryptBtn = new Button("Encrypt");
         Button decryptBtn = new Button("Decrypt");
+
+        algorithmBox.getItems().addAll("Caesar", "Vigenère");
+        algorithmBox.setValue("Caesar");
     }
 }
 

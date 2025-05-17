@@ -125,6 +125,8 @@ public class CVCipher extends Application {
         StringBuilder sb = new StringBuilder();
         key = key.toLowerCase();
         int j = 0;
+
+        return sb.toString();
     }
     private void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION, message);

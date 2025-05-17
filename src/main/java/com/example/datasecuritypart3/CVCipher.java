@@ -117,6 +117,7 @@ public class CVCipher extends Application {
                 char base = Character.isUpperCase(c) ? 'A' : 'a';
                 c = (char) ((c - base + shift) % 26 + base);
             }
+            sb.append(c);
         }
     }
     private void showAlert(String title, String message) {

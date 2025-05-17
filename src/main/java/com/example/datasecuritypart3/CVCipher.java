@@ -104,11 +104,9 @@ public class CVCipher extends Application {
             } else {
                 inputText = messageArea.getText();
             }
-
         } catch (Exception ex) {
             showAlert("Error", ex.getMessage());
         }
-
     }
     private String cesarEncrypt(String text, int shift){
         StringBuilder sb  = new StringBuilder();
@@ -125,7 +123,6 @@ public class CVCipher extends Application {
         StringBuilder sb = new StringBuilder();
         key = key.toLowerCase();
         int j = 0;
-
         for (char c : text.toCharArray()) {
             if (Character.isLetter(c)) {
                 char base = Character.isUpperCase(c) ? 'A' : 'a';

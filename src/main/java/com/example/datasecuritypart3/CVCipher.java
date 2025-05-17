@@ -111,6 +111,10 @@ public class CVCipher extends Application {
 
     }
 
+    private String cesarEncrypt(String text, int shift){
+
+    }
+
     private void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION, message);
         alert.setTitle(title);

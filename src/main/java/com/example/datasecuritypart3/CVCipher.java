@@ -128,7 +128,10 @@ public class CVCipher extends Application {
 
         for (char c : text.toCharArray()) {
             if (Character.isLetter(c)) {
-
+                char base = Character.isUpperCase(c) ? 'A' : 'a';
+                int shift = key.charAt(j % key.length()) - 'a';
+                c = (char) ((c - base + shift) % 26 + base);
+                j++;
             }
         }
         return sb.toString();

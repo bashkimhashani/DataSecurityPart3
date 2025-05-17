@@ -122,7 +122,9 @@ public class CVCipher extends Application {
         return sb.toString();
     }
     private String vigenereEncrypt(String text, String key){
-
+        StringBuilder sb = new StringBuilder();
+        key = key.toLowerCase();
+        int j = 0;
     }
     private void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION, message);

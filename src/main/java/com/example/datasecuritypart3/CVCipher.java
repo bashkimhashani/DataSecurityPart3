@@ -127,7 +127,9 @@ public class CVCipher extends Application {
         int j = 0;
 
         for (char c : text.toCharArray()) {
+            if (Character.isLetter(c)) {
 
+            }
         }
         return sb.toString();
     }

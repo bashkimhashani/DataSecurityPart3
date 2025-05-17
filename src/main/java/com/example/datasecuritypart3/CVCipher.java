@@ -12,6 +12,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.*;
 import javafx.scene.control.*;
+import java.nio.file.Files;
+import javafx.scene.control.Alert;
 
 import java.io.File;
 
@@ -53,14 +55,14 @@ public class CVCipher extends Application {
         topPane.add(savePathField, 1, 2);
         topPane.add(saveFileBtn, 2, 2);
 
-        browseFileBtn.setOnAction(e ->{
+        browseFileBtn.setOnAction(e -> {
             File file = new FileChooser().showOpenDialog(stage);
-            if(file != null) filePathField.setText(file.getAbsolutePath());
+            if (file != null) filePathField.setText(file.getAbsolutePath());
         });
 
-        saveFileBtn.setOnAction(e ->{
+        saveFileBtn.setOnAction(e -> {
             File file = new FileChooser().showSaveDialog(stage);
-            if(file != null) savePathField.setText(file.getAbsolutePath());
+            if (file != null) savePathField.setText(file.getAbsolutePath());
         });
         messageArea.setPromptText("Or type your message here...");
         messageArea.setWrapText(true);
@@ -90,6 +92,7 @@ public class CVCipher extends Application {
         stage.setScene(new Scene(root, 600, 450));
         stage.show();
     }
+
     private void process(boolean encrypt) {
         String key = keyField.getText().trim();
         String algorithm = algorithmBox.getValue();
@@ -101,10 +104,19 @@ public class CVCipher extends Application {
             } else {
                 inputText = messageArea.getText();
             }
+
         }
 
+    }
 
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, message);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.showAndWait();
+    }
 
+}
 
 
 

@@ -105,6 +105,8 @@ public class CVCipher extends Application {
                 inputText = messageArea.getText();
             }
 
+        } catch (Exception ex) {
+            showAlert("Error", ex.getMessage());
         }
 
     }

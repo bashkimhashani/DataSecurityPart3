@@ -2,11 +2,18 @@ package com.example.datasecuritypart3;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.*;
 import javafx.scene.control.*;
+import java.nio.file.Files;
+import javafx.scene.control.Alert;
 
 import java.io.File;
 
@@ -97,9 +104,8 @@ public class CVCipher extends Application {
                 inputText = messageArea.getText();
             }
 
-        }
+        // test message
 
-    // test
 
 
 

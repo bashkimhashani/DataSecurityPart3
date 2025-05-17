@@ -113,7 +113,10 @@ public class CVCipher extends Application {
     private String cesarEncrypt(String text, int shift){
         StringBuilder sb  = new StringBuilder();
         for(char c : text.toCharArray()){
-
+            if (Character.isLetter(c)) {
+                char base = Character.isUpperCase(c) ? 'A' : 'a';
+                c = (char) ((c - base + shift) % 26 + base);
+            }
         }
     }
     private void showAlert(String title, String message) {

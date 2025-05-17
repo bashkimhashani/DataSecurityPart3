@@ -133,6 +133,7 @@ public class CVCipher extends Application {
                 c = (char) ((c - base + shift) % 26 + base);
                 j++;
             }
+            sb.append(c);
         }
         return sb.toString();
     }

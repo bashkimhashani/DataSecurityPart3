@@ -101,8 +101,6 @@ public class CVCipher extends Application {
             if (algorithm.equals("Caesar")) {
                 int caesarKey = Integer.parseInt(key);
                 result = encrypt ? caesarEncrypt(inputText, caesarKey) : caesarDecrypt(inputText, caesarKey);
-            } else {
-                inputText = messageArea.getText();
             }
         }
 

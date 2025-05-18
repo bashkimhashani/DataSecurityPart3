@@ -104,6 +104,13 @@ public class CVCipher extends Application {
             } else {
                 inputText = messageArea.getText();
             }
+            String result;
+            if (algorithm.equals("Caesar")) {
+                int caesarKey = Integer.parseInt(key);
+                result = encrypt ? caesarEncrypt(inputText, caesarKey) : caesarDecrypt(inputText, caesarKey);
+            }
+
+
         } catch (Exception ex) {
             showAlert("Error", ex.getMessage());
         }
@@ -134,6 +141,8 @@ public class CVCipher extends Application {
         }
         return sb.toString();
     }
+
+
     private void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION, message);
         alert.setTitle(title);

@@ -112,6 +112,11 @@ public class CVCipher extends Application {
                 result = encrypt ? vigenereEncrypt(inputText, key) : vigenereDecrypt(inputText, key);
             }
 
+            if (!savePathField.getText().isEmpty()) {
+                Files.writeString(new File(savePathField.getText()).toPath(), result);
+                showAlert("Success", "Output saved to file.");
+            }
+
 
         } catch (Exception ex) {
             showAlert("Error", ex.getMessage());

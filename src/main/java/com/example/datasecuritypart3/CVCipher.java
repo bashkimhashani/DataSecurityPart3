@@ -115,6 +115,8 @@ public class CVCipher extends Application {
             if (!savePathField.getText().isEmpty()) {
                 Files.writeString(new File(savePathField.getText()).toPath(), result);
                 showAlert("Success", "Output saved to file.");
+            } else {
+                messageArea.setText(result);
             }
 
 

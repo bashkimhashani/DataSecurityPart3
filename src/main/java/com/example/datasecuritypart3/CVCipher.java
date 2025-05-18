@@ -156,7 +156,14 @@ public class CVCipher extends Application {
     }
 
     private String vigenereDecrypt(String text, String key) {
+        private String vigenereDecrypt(String text, String key) {
+            StringBuilder sb = new StringBuilder();
+            key = key.toLowerCase();
+            int j = 0;
 
+
+            return sb.toString();
+        }
     }
 
 

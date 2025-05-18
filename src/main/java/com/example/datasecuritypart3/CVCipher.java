@@ -155,7 +155,6 @@ public class CVCipher extends Application {
         return sb.toString();
     }
 
-    private String vigenereDecrypt(String text, String key) {
         private String vigenereDecrypt(String text, String key) {
             StringBuilder sb = new StringBuilder();
             key = key.toLowerCase();
@@ -172,8 +171,6 @@ public class CVCipher extends Application {
             }
             return sb.toString();
         }
-    }
-
 
     private void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION, message);
@@ -181,11 +178,4 @@ public class CVCipher extends Application {
         alert.setHeaderText(null);
         alert.showAndWait();
     }
-
 }
-
-
-
-
-
-

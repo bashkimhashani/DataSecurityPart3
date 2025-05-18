@@ -119,12 +119,11 @@ public class CVCipher extends Application {
                 messageArea.setText(result);
             }
 
-
         } catch (Exception ex) {
             showAlert("Error", ex.getMessage());
         }
     }
-    private String cesarEncrypt(String text, int shift){
+    private String caesarEncrypt(String text, int shift){
         StringBuilder sb  = new StringBuilder();
         for(char c : text.toCharArray()){
             if (Character.isLetter(c)) {
@@ -135,6 +134,11 @@ public class CVCipher extends Application {
         }
         return sb.toString();
     }
+
+    private String caesarDecrypt(String text, int shift) {
+        return caesarEncrypt(text, 26 - (shift % 26));
+    }
+
     private String vigenereEncrypt(String text, String key){
         StringBuilder sb = new StringBuilder();
         key = key.toLowerCase();
